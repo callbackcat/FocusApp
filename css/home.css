@@ -1,0 +1,72 @@
+:root {
+  --table-color: #ca5843;
+  --wall-color: #754147;
+  --blinds-color: #313051;
+  --window-color: #362f3c;
+  --frame-color: #8e372a;
+}
+
+body {
+  background-color: var(--wall-color);
+}
+
+.table {
+  padding: 4.5rem 0 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--table-color);
+  color: var(--text-color-light);
+}
+
+.table__container {
+  max-width: 1820px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 2.2rem;
+  text-align: center;
+}
+
+.window {
+}
+
+.window__container {
+  border: 12px solid var(--frame-color);
+  padding: 18rem;
+  margin-left: 2rem;
+  margin-right: 30rem;
+  background-color: var(--window-color);
+  text-align: center;
+}
+
+.blinds {
+}
+
+.blinds__container {
+  padding: 2rem;
+  margin-left: 2rem;
+  margin-right: 30rem;
+  background-color: var(--blinds-color);
+  text-align: center;
+}
+
+/* Phones */
+@media only screen and (max-width: 576px) {
+}
+
+/* Portrait tablets and large phones */
+@media only screen and (min-width: 576px) {
+}
+
+/* Landscape tablets */
+@media only screen and (min-width: 768px) {
+}
+
+/* Laptops/desktops */
+@media only screen and (min-width: 992px) {
+}
+
+/* Large laptops and desktops */
+@media only screen and (min-width: 1200px) {
+}
+
