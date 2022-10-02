@@ -157,6 +157,7 @@ button {
   font-weight: var(--font-medium);
 }
 
+/* Hero */
 .hero {
   font-family: var(--hero-font);
   position: relative;
