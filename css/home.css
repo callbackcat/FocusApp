@@ -32,7 +32,7 @@ body {
 
 .window__container {
   border: 12px solid var(--frame-color);
-  padding: 18rem;
+  padding: 18.5rem;
   margin-left: 2rem;
   margin-right: 30rem;
   background-color: var(--window-color);
@@ -43,7 +43,7 @@ body {
 }
 
 .blinds__container {
-  padding: 2rem;
+  padding: 1.5rem;
   margin-left: 2rem;
   margin-right: 30rem;
   background-color: var(--blinds-color);
