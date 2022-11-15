@@ -1,68 +1,39 @@
 <!DOCTYPE html>
-<html lang="ru">
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Todo List Application</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/todo.css" />
+
+    <!-- Unicons CSS -->
     <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <script src="scripts/main.js"></script>
-    <title>Focus App</title>
   </head>
   <body>
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">BitFocus</a>
+    <div class="container">
+      <div class="input-field">
+        <textarea placeholder="Enter your new todo"></textarea>
+        <i class="uil uil-notes note-icon"></i>
+      </div>
 
-        <div class="nav__menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link">
-                <i class="bx bx-home-alt-2"></i>
-                <span>Home</span>
-              </a>
-            </li>
+      <ul class="todoLists"></ul>
 
-            <li class="nav__item">
-              <a href="#" class="nav__link">
-                <i class="bx bx-info-circle"></i>
-                <span>About</span>
-              </a>
-            </li>
+      <div class="pending-tasks">
+        <span
+          >You have <span class="pending-num"> no </span> tasks pending.</span
+        >
+        <button class="clear-button">Clear All</button>
+      </div>
+    </div>
 
-            <li class="nav__item">
-              <a href="#" class="nav__link">
-                <i class="bx bx-calendar-star"></i>
-                <span>Features</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <a href="#" class="button nav__button"
-          >Start<i class="bx bxs-right-arrow"></i>
-        </a>
-      </nav>
-    </header>
-    
-    <main class="main">
-      <section class="hero section" id="hero">
-        <div class="hero__container container grid">
-          <div class="hero__data">
-            <h1 class="hero__title">Learn to value Your time with BitFocus</h1>
-            <p class="hero__description">
-              The real ability to stay focused comes only after realizing how
-              much time we've wasted. Find the true value of your time playfully
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer"></footer>
+    <!-- JavaScript -->
+    <script src="./components/todo.js"></script>
   </body>
 </html>

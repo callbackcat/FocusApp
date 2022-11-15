@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="../css/sidebar.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/todo.css" />
+    <link rel="stylesheet" href="../css/todomodal.css" />
+    <link rel="stylesheet" href="../css/storemodal.css" />
+    <link rel="stylesheet" href="../scripts/coincounter.js" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../iziToast-master/dist/css/iziToast.min.css"
+    />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       charset="utf-8"
@@ -14,6 +31,160 @@
     <title>Document</title>
   </head>
   <body>
+    <details id="popup profile">
+      <summary>
+        <div class="details-modal-overlay"></div>
+      </summary>
+      <div class="details-modal">
+        <div class="details-modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <div class="details-modal-title">
+          <i class="bx bx-cog"></i>Profile settings
+        </div>
+        <div class="details-modal-content">
+          <p>Settings</p>
+        </div>
+      </div>
+    </details>
+
+    <details id="popup store">
+      <summary>
+        <div class="details-modal-overlay-store"></div>
+      </summary>
+      <div class="details-modal-store">
+        <div class="details-modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <div class="details-modal-title">
+          <i class="bx bx-shopping-bag"></i>Bitfocus shop
+        </div>
+        <div class="details-modal-content">
+          <p>Store</p>
+        </div>
+      </div>
+    </details>
+
+    <details id="popup help">
+      <summary>
+        <div class="details-modal-overlay"></div>
+      </summary>
+      <div class="details-modal">
+        <div class="details-modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <div class="details-modal-title"><i class="bx bxs-buoy"></i>FAQ</div>
+        <div class="details-modal-content"></div>
+      </div>
+    </details>
+
+    <details id="popup todo">
+      <summary>
+        <div class="details-modal-overlay"></div>
+      </summary>
+      <div class="details-modal-todo">
+        <div class="details-modal-content">
+          <div class="container">
+            <div class="input-field">
+              <textarea placeholder="Что нужно сделать?"></textarea>
+              <i class="uil uil-notes note-icon"></i>
+            </div>
+            <ul class="todoLists"></ul>
+            <div class="pending-tasks">
+              <span
+                >Количество активных задач: <span class="pending-num"> 0 </span>
+              </span>
+              <button class="clear-button">Удалить задачи</button>
+            </div>
+          </div>
+          <script src="../components/todo.js"></script>
+        </div>
+      </div>
+    </details>
+
+    <script
+      src="../iziToast-master/dist/js/iziToast.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      iziToast.success({
+        title: "Success",
+        message: "You bought a new item!",
+      });
+    </script>
+
+    <script src="../scripts/timer.min.js"></script>
+    <script type="text/javascript">
+      TimeMe.initialize({
+        currentPageName: "home",
+      });
+
+      window.onload = function () {
+        setInterval(function () {
+          let timeSpentOnPage = TimeMe.getTimeOnCurrentPageInSeconds();
+          document.getElementById("timeInSeconds").textContent =
+            timeSpentOnPage.toFixed(0);
+        });
+      };
+
+      window.onbeforeunload = function () {
+        localStorage.setItem(
+          "timeInSeconds",
+          Number(document.getElementById("timeInSeconds").textContent) +
+            Number(localStorage.getItem("timeInSeconds"))
+        );
+      };
+    </script>
+
+    <div class="coins">
+      <div class="coins__container">
+        <h1><span id="timeInSeconds">0</span> <i class="bx bxs-coin"></i></h1>
+      </div>
+    </div>
+
+    <div class="todo">
+      <div class="todo__container">Todo</div>
+    </div>
+
     <header>
       <div class="blinds">
         <div class="blinds__container">Blinds</div>
@@ -32,51 +203,51 @@
       </div>
     </footer>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
-
     <div class="menu-btn">
-      <i class="fas fa-bars"></i>
+      <i class="bx bx-menu-alt-right"></i>
     </div>
 
     <div class="side-bar">
       <div class="menu">
-        <div class="item">
-          <a href="#"><i class="fas fa-desktop"></i>Dashboard</a>
+        <div class="item store">
+          <a><i class="bx bx-store-alt"></i>Shop</a>
         </div>
-        <div class="item">
-          <a class="sub-btn"
-            ><i class="fas fa-table"></i>Tables<i
-              class="fas fa-angle-right dropdown"
-            ></i
-          ></a>
-          <div class="sub-menu">
-            <a href="#" class="sub-item">Sub Item 01</a>
-            <a href="#" class="sub-item">Sub Item 02</a>
-            <a href="#" class="sub-item">Sub Item 03</a>
-          </div>
+        <div class="item profile">
+          <a><i class="bx bx-user"></i>Profile</a>
         </div>
-        <div class="item">
-          <a href="#"><i class="fas fa-th"></i>Forms</a>
-        </div>
-        <div class="item">
-          <a class="sub-btn"
-            ><i class="fas fa-cogs"></i>Settings<i
-              class="fas fa-angle-right dropdown"
-            ></i
-          ></a>
-          <div class="sub-menu">
-            <a href="#" class="sub-item">Sub Item 01</a>
-            <a href="#" class="sub-item">Sub Item 02</a>
-          </div>
-        </div>
-        <div class="item">
-          <a href="#"><i class="fas fa-info-circle"></i>About</a>
+        <div class="item help">
+          <a><i class="bx bx-help-circle"></i>Help</a>
         </div>
       </div>
     </div>
+
+    <script>
+      $(".store").on("click", function (e) {
+        var popup = document.getElementById("popup store");
+        popup.setAttribute("open", "true");
+
+        document.getElementById("popup profile").removeAttribute("open");
+        document.getElementById("popup help").removeAttribute("open");
+      });
+      $(".profile").on("click", function (e) {
+        var popup = document.getElementById("popup profile");
+        popup.setAttribute("open", "true");
+
+        document.getElementById("popup store").removeAttribute("open");
+        document.getElementById("popup help").removeAttribute("open");
+      });
+      $(".help").on("click", function (e) {
+        var popup = document.getElementById("popup help");
+        popup.setAttribute("open", "true");
+
+        document.getElementById("popup store").removeAttribute("open");
+        document.getElementById("popup profile").removeAttribute("open");
+      });
+      $(".todo").on("click", function (e) {
+        var popup = document.getElementById("popup todo");
+        popup.setAttribute("open", "true");
+      });
+    </script>
 
     <script type="text/javascript">
       $(document).ready(function () {
