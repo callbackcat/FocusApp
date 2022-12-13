@@ -8,12 +8,13 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 60em;
-  height: 30em;
+  width: 30em;
+  height: 42em;
   text-align: left;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .details-modal .details-modal-close {
@@ -53,11 +54,9 @@
   margin-right: 10px;
 }
 
-.details-modal .details-modal-content {
+.details-modal .details-modal-content-account {
   border-top: 1px solid #e0e0e0;
-  padding: 2em;
   pointer-events: all;
-  overflow: auto;
 }
 
 .details-modal-overlay {
@@ -70,6 +69,7 @@
   right: 0;
   left: 0;
   top: 0;
+  z-index: 2;
 }
 
 details[open] .details-modal-overlay {

@@ -1,22 +1,20 @@
-.details-modal-store {
+.details-modal-faq {
   background: #fff;
   border-radius: 0.5em;
   left: 50%;
   max-width: 90%;
-  pointer-events: none;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 65em;
-  height: 50em;
+  width: 30em;
+  height: 15em;
   text-align: left;
-  max-height: 90vh;
   display: flex;
   flex-direction: column;
   z-index: 2;
 }
 
-.details-modal-store .details-modal-close {
+.details-modal-faq .details-modal-close {
   align-items: center;
   color: #111827;
   display: flex;
@@ -29,11 +27,11 @@
   width: 4.5em;
 }
 
-.details-modal-store .details-modal-close svg {
+.details-modal-faq .details-modal-close svg {
   display: block;
 }
 
-.details-modal-store .details-modal-title {
+.details-modal-faq .details-modal-title-faq {
   color: #111827;
   padding: 1.5em 2em;
   pointer-events: all;
@@ -41,27 +39,24 @@
   width: calc(100% - 4.5em);
 }
 
-.details-modal-store .details-modal-title h1 {
+.details-modal-faq .details-modal-title-faq h1 {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: normal;
 }
 
-.details-modal-store .details-modal-title i {
+.details-modal-faq .details-modal-title-faq i {
   font-size: 1.4rem;
   font-weight: 600;
   margin-right: 10px;
 }
 
-.details-modal-store .details-modal-content {
+.details-modal-faq .details-modal-content-faq {
   border-top: 1px solid #e0e0e0;
-  padding: 2em;
   pointer-events: all;
-  overflow: auto;
 }
 
-.details-modal-overlay-store {
-  z-index: 2;
+.details-modal-overlay {
   transition: opacity 0.2s ease-out;
   pointer-events: none;
   background: rgba(15, 23, 42, 0.8);
@@ -71,9 +66,10 @@
   right: 0;
   left: 0;
   top: 0;
+  z-index: 2;
 }
 
-details[open] .details-modal-overlay-store {
+details[open] .details-modal-overlay {
   pointer-events: all;
   opacity: 0.5;
 }
@@ -102,6 +98,12 @@ code {
   font-size: 1.75rem;
   position: relative;
   top: -2px;
+}
+
+.container {
+  text-align: center;
+  max-width: 40em;
+  padding: 2em;
 }
 
 .container > h1 {

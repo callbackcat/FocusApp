@@ -64,6 +64,8 @@ body {
   color: var(--text-color);
 }
 
+html, body {margin: 0; height: 100%; overflow: hidden}
+
 h1,
 h2,
 h3 {
@@ -82,6 +84,48 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.flower {
+  position: fixed;
+  width: auto;
+  height: auto;
+  left: -5rem;
+  bottom: 30px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.flower.active {
+  opacity: 1;
+}
+
+.frog {
+  position: fixed;
+  width: 140px;
+  height: auto;
+  left: 15rem;
+  bottom: 20px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.frog.active {
+  opacity: 1;
+}
+
+.lamp {
+  position: fixed;
+  width: 420px;
+  height: auto;
+  right: 3rem;
+  bottom: -1rem;
+  opacity: 0;
+  z-index: 1;
+}
+
+.lamp.active {
+  opacity: 1;
 }
 
 input,
@@ -199,72 +243,24 @@ button {
   }
 }
 
-@media screen and (max-width: 1023px) {
-  .nav__menu {
-    position: fixed;
-    bottom: 2rem;
-    background-color: var(--container-color);
-    box-shadow: 0 8px 24px hsla(228, 66%, 45%, 0.15);
-    width: 90%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    padding: 1.3rem 5rem;
-    border-radius: 0.5rem;
-  }
-  .nav__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav__link {
-    color: var(--text-color);
-    display: flex;
-    padding: 0.5rem;
-    border-radius: 50%;
-  }
-  .nav__link i {
-    font-size: 1.8rem;
-  }
-  .nav__link span {
-    display: none;
+@media (max-width: 575.98px) {
+  .lamp {
+    right: -2rem;
   }
 }
 
-@media screen and (min-width: 1023px) {
-  .nav {
-    height: calc(var(--header-height) + 1.5rem);
-  }
-  .nav__menu {
-    width: initial;
-  }
-  .nav__list {
-    display: flex;
-    column-gap: 3rem;
-  }
-  .nav__link i {
-    display: none;
-  }
-  .nav__link {
-    color: var(--text-color-light);
-  }
-  .nav__button {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 0.25rem;
-  }
-  .nav__button i {
-    font-size: 1rem;
-  }
+@media (max-width: 767.98px) {
 }
 
-@media screen and (min-width: 1040px) {
-  .container {
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 991.98px) {
+  .flower {
+    max-width: 300px;
   }
-
-  .hero__container {
-    column-gap: 4rem;
+  .lamp {
+    max-width: 320px;
+  }
+  .frog {
+    max-width: 120px;
+    left: 10rem;
   }
 }

@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="../css/sidebar.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/home.css" />
-    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/accordion.css" />
+    <link rel="stylesheet" href="../css/accountmodal.css" />
     <link rel="stylesheet" href="../css/todo.css" />
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/faqmodal.css" />
     <link rel="stylesheet" href="../css/todomodal.css" />
     <link rel="stylesheet" href="../css/storemodal.css" />
-    <link rel="stylesheet" href="../scripts/coincounter.js" />
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -53,10 +57,114 @@
           </svg>
         </div>
         <div class="details-modal-title">
-          <i class="bx bx-cog"></i>Profile settings
+          <i class="bx bx-cog"></i>Manage account
         </div>
-        <div class="details-modal-content">
-          <p>Settings</p>
+        <div class="details-modal-content-account">
+          <section class="container__login forms">
+            <div class="form login">
+              <div class="form-content">
+                <header>Login</header>
+                <form action="#">
+                  <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" />
+                  </div>
+
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      class="password"
+                    />
+                    <i class="bx bx-hide eye-icon"></i>
+                  </div>
+
+                  <div class="form-link">
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                  </div>
+
+                  <div class="field button-field">
+                    <button>Login</button>
+                  </div>
+                </form>
+
+                <div class="form-link">
+                  <span
+                    >Don't have an account?
+                    <a href="#" class="link signup-link">Signup</a></span
+                  >
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="media-options">
+                <a href="#" class="field facebook">
+                  <span>Login with Facebook</span>
+                </a>
+              </div>
+
+              <div class="media-options">
+                <a href="#" class="field google">
+                  <span>Login with Google</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Signup Form -->
+
+            <div class="form signup">
+              <div class="form-content">
+                <header>Signup</header>
+                <form action="#">
+                  <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" />
+                  </div>
+
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Create password"
+                      class="password"
+                    />
+                  </div>
+
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Confirm password"
+                      class="password"
+                    />
+                    <i class="bx bx-hide eye-icon"></i>
+                  </div>
+
+                  <div class="field button-field">
+                    <button>Signup</button>
+                  </div>
+                </form>
+
+                <div class="form-link">
+                  <span
+                    >Already have an account?
+                    <a href="#" class="link login-link">Login</a></span
+                  >
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="media-options">
+                <a href="#" class="field facebook">
+                  <span>Login with Facebook</span>
+                </a>
+              </div>
+
+              <div class="media-options">
+                <a href="#" class="field google">
+                  <span>Login with Google</span>
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </details>
@@ -86,7 +194,92 @@
           <i class="bx bx-shopping-bag"></i>Bitfocus shop
         </div>
         <div class="details-modal-content">
-          <p>Store</p>
+          <div class="shopping-cart">
+            <!-- Product #1 -->
+            <div class="shop__item">
+              <div class="image">
+                <img src="../images/fern.jpg" alt="" />
+              </div>
+              <div class="buttons">
+                <span class="delete-btn"></span>
+                <span class="like-btn"></span>
+              </div>
+
+              <div class="description">
+                <span>Just a boring flower</span>
+                <span>Common item</span>
+              </div>
+
+              <div class="quantity">
+                <button
+                  class="plus-btn"
+                  type="button"
+                  name="button"
+                  onclick="buyItem(`flower`, 100)"
+                >
+                  Buy
+                </button>
+              </div>
+
+              <div class="total-price">
+                Price: 100 <i class="bx bxs-coin"></i>
+              </div>
+            </div>
+
+            <!-- Product #2 -->
+            <div class="shop__item">
+              <div class="image">
+                <img src="../images/lamp.jpg" alt="" />
+              </div>
+
+              <div class="description">
+                <span>Cool lamp</span>
+                <span style="color: var(--uncommon-item)">Uncommon item</span>
+              </div>
+
+              <div class="quantity">
+                <button
+                  class="plus-btn"
+                  type="button"
+                  name="button"
+                  onclick="buyItem(`lamp`, 500)"
+                >
+                  Buy
+                </button>
+              </div>
+
+              <div class="total-price">
+                Price: 500 <i class="bx bxs-coin"></i>
+              </div>
+            </div>
+
+            <!-- Product #3 -->
+            <div class="shop__item">
+              <div class="image">
+                <img src="../images/frog.jpg" alt="" />
+              </div>
+
+              <div class="description">
+                <span>Big fucking frog</span>
+                <span style="color: var(--epic-item)">Epic item</span>
+              </div>
+
+              <div class="quantity">
+                <button
+                  class="plus-btn"
+                  type="button"
+                  name="button"
+                  onclick="buyItem(`frog`, 790)"
+                >
+                  Buy
+                </button>
+              </div>
+
+              <div class="total-price">
+                Price: 790 <i class="bx bxs-coin"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </details>
@@ -95,7 +288,7 @@
       <summary>
         <div class="details-modal-overlay"></div>
       </summary>
-      <div class="details-modal">
+      <div class="details-modal-faq">
         <div class="details-modal-close">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +305,59 @@
             />
           </svg>
         </div>
-        <div class="details-modal-title"><i class="bx bxs-buoy"></i>FAQ</div>
-        <div class="details-modal-content"></div>
+        <div class="details-modal-title-faq">
+          <i class="bx bxs-buoy"></i>FAQ
+        </div>
+        <div class="details-modal-content-faq">
+          <ul id="accordion" class="accordion">
+            <li>
+              <div class="link">
+                <i class="fa fa-database"></i>About<i
+                  class="fa fa-chevron-down"
+                ></i>
+              </div>
+              <ul class="submenu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="link">
+                <i class="fa fa-code"></i>Sus page<i
+                  class="fa fa-chevron-down"
+                ></i>
+              </div>
+              <ul class="submenu">
+                <li><a href="#">ඞ</a></li>
+                <li><a href="#">ඞ</a></li>
+                <li><a href="#">ඞ</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="link">
+                <i class="fa fa-mobile"></i>Other<i
+                  class="fa fa-chevron-down"
+                ></i>
+              </div>
+              <ul class="submenu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="link">
+                <i class="fa fa-globe"></i>Something doesn's work?<i
+                  class="fa fa-chevron-down"
+                ></i>
+              </div>
+              <ul class="submenu">
+                <li><a href="#">Well, that's unfortunate :)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </details>
 
@@ -133,10 +377,9 @@
               <span
                 >Количество активных задач: <span class="pending-num"> 0 </span>
               </span>
-              <button class="clear-button">Удалить задачи</button>
+              <button class="clear-button"><i class='bx bx-trash'></i></button>
             </div>
           </div>
-          <script src="../components/todo.js"></script>
         </div>
       </div>
     </details>
@@ -145,44 +388,13 @@
       src="../iziToast-master/dist/js/iziToast.min.js"
       type="text/javascript"
     ></script>
-    <script type="text/javascript">
-      iziToast.success({
-        title: "Success",
-        message: "You bought a new item!",
-      });
-    </script>
 
     <script src="../scripts/timer.min.js"></script>
-    <script type="text/javascript">
-      TimeMe.initialize({
-        currentPageName: "home",
-      });
-
-      window.onload = function () {
-        setInterval(function () {
-          let timeSpentOnPage = TimeMe.getTimeOnCurrentPageInSeconds();
-          document.getElementById("timeInSeconds").textContent =
-            timeSpentOnPage.toFixed(0);
-        });
-      };
-
-      window.onbeforeunload = function () {
-        localStorage.setItem(
-          "timeInSeconds",
-          Number(document.getElementById("timeInSeconds").textContent) +
-            Number(localStorage.getItem("timeInSeconds"))
-        );
-      };
-    </script>
 
     <div class="coins">
       <div class="coins__container">
         <h1><span id="timeInSeconds">0</span> <i class="bx bxs-coin"></i></h1>
       </div>
-    </div>
-
-    <div class="todo">
-      <div class="todo__container">Todo</div>
     </div>
 
     <header>
@@ -192,10 +404,19 @@
     </header>
 
     <main>
-      <div class="window">
-        <div class="window__container">Window</div>
+      <div id="offer-intro">
+        <div class="todo__wrapper">
+          <div class="todo">
+            <div class="todo__container">Todo</div>
+          </div>
+        </div>
+        <div class="window">
+          <div class="window__container">Window</div>
+        </div>
       </div>
     </main>
+
+    <img class="flower" src="../images/fern.jpg" alt="" />
 
     <footer>
       <div class="table">
@@ -213,61 +434,25 @@
           <a><i class="bx bx-store-alt"></i>Shop</a>
         </div>
         <div class="item profile">
-          <a><i class="bx bx-user"></i>Profile</a>
+          <a><i class="bx bx-user"></i>Account</a>
         </div>
         <div class="item help">
           <a><i class="bx bx-help-circle"></i>Help</a>
         </div>
+        <div class="item todo replacement">
+          <a><i class='bx bx-food-menu'></i>Todo</a>
+        </div>
       </div>
     </div>
 
-    <script>
-      $(".store").on("click", function (e) {
-        var popup = document.getElementById("popup store");
-        popup.setAttribute("open", "true");
+    <img class="lamp" src="../images/lamp.jpg" alt="" />
+    <img class="frog" src="../images/frog.jpg" alt="" />
 
-        document.getElementById("popup profile").removeAttribute("open");
-        document.getElementById("popup help").removeAttribute("open");
-      });
-      $(".profile").on("click", function (e) {
-        var popup = document.getElementById("popup profile");
-        popup.setAttribute("open", "true");
-
-        document.getElementById("popup store").removeAttribute("open");
-        document.getElementById("popup help").removeAttribute("open");
-      });
-      $(".help").on("click", function (e) {
-        var popup = document.getElementById("popup help");
-        popup.setAttribute("open", "true");
-
-        document.getElementById("popup store").removeAttribute("open");
-        document.getElementById("popup profile").removeAttribute("open");
-      });
-      $(".todo").on("click", function (e) {
-        var popup = document.getElementById("popup todo");
-        popup.setAttribute("open", "true");
-      });
-    </script>
-
-    <script type="text/javascript">
-      $(document).ready(function () {
-        //jquery for toggle sub menus
-        $(".sub-btn").click(function () {
-          $(this).next(".sub-menu").slideToggle();
-          $(this).find(".dropdown").toggleClass("rotate");
-        });
-        $(".menu-btn").click(function () {
-          $(".side-bar").addClass("active");
-          $(".menu-btn").css("visibility", "hidden");
-        });
-      });
-      $(document).mouseup(function (e) {
-        var container = $(".side-bar");
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-          $(".side-bar").removeClass("active");
-          $(".menu-btn").css("visibility", "visible");
-        }
-      });
-    </script>
+    <script type="text/javascript" src="../components/sidebar.js"></script>
+    <script type="text/javascript" src="../scripts/main.js"></script>
+    <script src="../components/todo.js"></script>
+    <script src="../components/account.js"></script>
+    <script src="../components/accordion.js"></script>
+    <script type="text/javascript" src="../scripts/itemsLogic.js"></script>
   </body>
 </html>

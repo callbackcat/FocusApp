@@ -29,7 +29,6 @@
   padding: 25px;
   margin: 85px auto 0;
   background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -140,15 +139,13 @@ textarea::-webkit-scrollbar {
 }
 
 .pending-tasks .clear-button {
-  padding: 6px 12px;
+  padding: 12px 12px;
   outline: none;
   border: none;
   background: #4070f4;
   color: #fff;
   font-size: 14px;
   border-radius: 4px;
-  cursor: pointer;
-  pointer-events: none;
   white-space: nowrap;
 }
 
