@@ -4,21 +4,28 @@
   --blinds-color: #313051;
   --window-color: #362f3c;
   --frame-color: #8e372a;
-  --coin-yellow: #fed42b;
+  --coin-yellow: #edbf06;
   --todo-list-color: #eaa695;
+  --uncommon-item: #a1db4a;
+  --epic-item: #e040fb;
 }
 
 body {
   background-color: var(--wall-color);
 }
 
-.todo {
+.todo__wrapper {
+  margin: 0 auto;
   position: relative;
 }
 
-.todo__container {
+.todo {
   position: absolute;
-  right: 16rem;
+}
+
+.todo__container {
+  position: fixed;
+  right: 3rem;
   top: 15rem;
   padding: 8rem 4rem 8rem;
   background-color: var(--todo-list-color);
@@ -49,7 +56,7 @@ body {
 
 .coins__container {
   position: absolute;
-  right: 15rem;
+  right: 10rem;
   top: 2.5rem;
 }
 
@@ -60,10 +67,6 @@ body {
 
 .coins__container span {
   color: #fff;
-}
-
-.window {
-  margin-right: 20rem;
 }
 
 .window__container {
@@ -77,15 +80,51 @@ body {
   justify-content: center;
 }
 
-.blinds {
-}
-
 .blinds__container {
   padding: 1.5rem;
   margin-left: 2rem;
   max-width: 1367px;
   background-color: var(--blinds-color);
   text-align: center;
+}
+
+.replacement {
+  visibility: hidden;
+}
+
+/* Portrait tablets and large phones */
+@media only screen and (min-width: 993px) {
+  .window {
+    margin-right: 18rem;
+  }
+  .blinds {
+    margin-right: 18rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .replacement {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 992.98px) {
+  .window {
+    margin-right: 15rem;
+  }
+  .blinds {
+    margin-right: 15rem;
+  }
+  .todo__container {
+    right: 3rem;
+    padding: 6rem 3rem 6rem;
+  }
+  .coins__container {
+    right: 7rem;
+  }
 }
 
 /* Phones */
@@ -99,27 +138,10 @@ body {
   .todo__container {
     visibility: hidden;
   }
-}
-
-/* Portrait tablets and large phones */
-@media only screen and (min-width: 576px) {
-  .window {
-    margin-right: 14rem;
-  }
-  .blinds {
-    margin-right: 14rem;
+  .coins__container {
+    visibility: hidden;
   }
 }
 
-/* Landscape tablets */
-@media only screen and (min-width: 768px) {
-}
-
-/* Laptops/desktops */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Large laptops and desktops */
-@media only screen and (min-width: 1200px) {
+@media (max-width: 1199.98px) {
 }

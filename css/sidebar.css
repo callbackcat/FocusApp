@@ -102,30 +102,9 @@ h1 {
   line-height: 80px;
 }
 
-img {
-  width: 100px;
-  margin: 15px;
-  border-radius: 50%;
-  margin-left: 70px;
-  border: 3px solid #b4b8b9;
-}
-
-/* Phones */
 @media only screen and (max-width: 576px) {
-}
-
-/* Portrait tablets and large phones */
-@media only screen and (min-width: 576px) {
-}
-
-/* Landscape tablets */
-@media only screen and (min-width: 768px) {
-}
-
-/* Laptops/desktops */
-@media only screen and (min-width: 992px) {
-}
-
-/* Large laptops and desktops */
-@media only screen and (min-width: 1200px) {
+  .menu-btn {
+    right: 1rem;
+    top: -1rem;
+  }
 }
